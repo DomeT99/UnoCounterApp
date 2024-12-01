@@ -1,0 +1,10 @@
+{
+  "background_color": "#ffffff",
+  "description": "UnoCounterApp",
+  "display": "standalone",
+  "name": "UnoCounterApp",
+  "short_name": "UnoCounterApp",
+  "start_url": "/index.html",
+  "theme_color": "#ffffff",
+  "scope": "/"
+}

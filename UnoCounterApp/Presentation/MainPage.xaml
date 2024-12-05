@@ -10,14 +10,57 @@
   <ScrollViewer>
     <Grid utu:SafeArea.Insets="VisibleBounds">
 
-      <StackPanel
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Spacing="16">
-            <TextBlock Text="Counter:"/>
-            <TextBox BorderBrush="Black" Background="Transparent" FontFamily="Uno.Fonts.Roboto/Fonts/Roboto-Regular.ttf" CornerRadius="10" MinWidth="100" MinHeight="10" Style="{StaticResource NumberBoxTextBoxStyle}" TextAlignment="Center" />
-            <Button Content="Increment" />
+      <StackPanel VerticalAlignment="Center" Spacing="16">
+          <Image Width="200"
+                 Height="200"
+                 HorizontalAlignment="Center"
+                 Source="/Assets/meme.png"
+                 />
+
+          <TextBox BorderBrush="Black"
+                   Background="Transparent"
+                   CornerRadius="10"
+                   Margin="12"
+                   HorizontalAlignment="Center"
+                   PlaceholderText="Step Size"
+                   Text="1"
+                   TextAlignment="Center" />
+          <TextBlock Margin="12"
+                     FontSize="25"
+                     HorizontalAlignment="Center"
+                     TextAlignment="Center"
+                     Text="Counter is: 1" />
       </StackPanel>
+        <StackPanel VerticalAlignment="Bottom" Spacing="16" Margin="70">
+          <Grid>
+              <Grid.ColumnDefinitions>
+                  <ColumnDefinition  />
+                  <ColumnDefinition />
+                  <ColumnDefinition />
+                  <ColumnDefinition />
+                  <ColumnDefinition />
+                  <ColumnDefinition />
+              </Grid.ColumnDefinitions>
+              <Grid.RowDefinitions>
+                  <RowDefinition Height="*" />
+              </Grid.RowDefinitions>
+
+              <Button Grid.Column="2"
+                      Grid.Row="0"
+                      CornerRadius="30"
+                      Padding="15"
+                      HorizontalAlignment="Center"
+                      Margin="12"
+                      Content="Decrement" />
+              <Button Grid.Column="3"
+                      Grid.Row="0"
+                      CornerRadius="30"
+                      Padding="15"
+                      HorizontalAlignment="Center"
+                      Margin="12"
+                      Content="Increment" />
+          </Grid>
+        </StackPanel>
       <utu:NavigationBar FontWeight="SemiBold" FontFamily="Uno.Fonts.Roboto/Fonts/Roboto-Regular.ttf" Background="DarkOrchid" FontSize="12" Content="UnoCounterApp &#x1F4AC; " Style="{StaticResource MaterialPrimaryNavigationBarStyle}" />
     </Grid>
   </ScrollViewer>

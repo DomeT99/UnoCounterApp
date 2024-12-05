@@ -74,7 +74,7 @@ public partial class App : Application
                     .AddRefitClient<IApiClient>(context))
                 .ConfigureServices((context, services) =>
                 {
-                    // TODO: Register your services
+                     
                     //services.AddSingleton<IMyService, MyService>();
                 })
                 .UseNavigation(ReactiveViewModelMappings.ViewModelMappings, RegisterRoutes)

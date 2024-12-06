@@ -61,7 +61,15 @@
                       Content="Increment" />
           </Grid>
         </StackPanel>
-      <utu:NavigationBar FontWeight="SemiBold" FontFamily="Uno.Fonts.Roboto/Fonts/Roboto-Regular.ttf" Background="DarkOrchid" FontSize="12" Content="UnoCounterApp &#x1F4AC; " Style="{StaticResource MaterialPrimaryNavigationBarStyle}" />
+      <utu:NavigationBar
+          FontWeight="SemiBold"
+          FontFamily="Uno.Fonts.Roboto/Fonts/Roboto-Regular.ttf"
+          Background="DarkOrchid"
+          FontSize="12"
+          Content="UnoCounterApp &#x1F4AC; "
+          HorizontalContentAlignment="Center"
+          Style="{StaticResource MaterialPrimaryNavigationBarStyle}"
+          />
     </Grid>
   </ScrollViewer>
 </Page>

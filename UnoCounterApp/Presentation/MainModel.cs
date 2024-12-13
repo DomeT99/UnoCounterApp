@@ -1,27 +1,16 @@
 namespace UnoCounterApp.Presentation;
 
-public partial record MainModel
+internal partial record MainModel
+{ 
+    public IState<Countable> Countable => State.Value(this, () => new Countable(0, 1));
+    public ValueTask IncrementCounter() => Countable.UpdateAsync(c => c?.Increment());
+
+}
+
+internal partial record Countable(int Count, int Step)
 {
-    private INavigator _navigator;
-
-    public MainModel(
-        IStringLocalizer localizer,
-        IOptions<AppConfig> appInfo,
-        INavigator navigator)
+    public Countable Increment() => this with
     {
-        _navigator = navigator;
-        Title = "Main";
-        Title += $" - {localizer["ApplicationName"]}";
-        Title += $" - {appInfo?.Value?.Environment}";
-    }
-
-    public string? Title { get; }
-
-    public IState<string> Name => State<string>.Value(this, () => string.Empty);
-
-    public async Task GoToSecond()
-    {
-        var name = await Name;
-        await _navigator.NavigateViewModelAsync<SecondModel>(this, data: new Entity(name!));
-    }
+        Count = Count + Step
+    };
 }

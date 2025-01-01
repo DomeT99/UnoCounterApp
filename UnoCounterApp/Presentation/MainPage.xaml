@@ -38,31 +38,22 @@
         <StackPanel VerticalAlignment="Bottom" Spacing="16" Margin="70">
           <Grid>
               <Grid.ColumnDefinitions>
-                  <ColumnDefinition  />
-                  <ColumnDefinition />
-                  <ColumnDefinition />
-                  <ColumnDefinition />
-                  <ColumnDefinition />
-                  <ColumnDefinition />
+                  <ColumnDefinition Width="*" />
+                  <ColumnDefinition Width="*" />
               </Grid.ColumnDefinitions>
-              <Grid.RowDefinitions>
-                  <RowDefinition Height="*" />
-              </Grid.RowDefinitions>
 
-              <Button Grid.Column="2"
-                      Grid.Row="0"
+              <Button Grid.Column="0"
                       CornerRadius="30"
                       Padding="15"
-                      HorizontalAlignment="Center"
+                      HorizontalAlignment="Right"
                       Margin="12"
                       FontSize="20"
                       Command="{Binding DecrementCounter}"
                       Content="-" />
-              <Button Grid.Column="3"
-                      Grid.Row="0"
+              <Button Grid.Column="1"
                       CornerRadius="30"
                       Padding="15"
-                      HorizontalAlignment="Center"
+                      HorizontalAlignment="Left"
                       Margin="12"
                       FontSize="20"
                       Command="{Binding IncrementCounter}"
